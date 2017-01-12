@@ -13,7 +13,7 @@ export class FBChatBot extends EventEmitter {
         this.app = express();
         this.app.use(bodyParser.json());
 
-        const verifyToken = options.verifyToken || process.env.FBBOT_VERIFY_TOKEN || 'fbbot';
+        const verifyToken = options.verifyToken || process.env.FBCHATBOT_VERIFY_TOKEN || 'fbbot';
 
         this.app.get('/webhook', (req, res) => {
             if (req.query['hub.mode'] == 'subscribe') {
@@ -88,7 +88,7 @@ export class FBChatBot extends EventEmitter {
     }
 
     sendMessage(message) {
-        const accessToken = this.options.accessToken || process.env.FBBOT_ACCESS_TOKEN;
+        const accessToken = this.options.accessToken || process.env.FBCHATBOT_ACCESS_TOKEN;
 
         if (!accessToken) return Promise.reject('No page access token provided');
 
