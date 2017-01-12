@@ -16,7 +16,7 @@ var bot = new FBChatBot({
   port: 3000 // port to run the web server on, can also specify PORT env var
 });
 
-// Respond to incoming messages
+// Respond to incoming events
 // Valid events are: pre_checkout, message, delivery, read, postback, optin, referral, payment, checkout_update, account_linking
 bot.on('message', function(message) {
    // ... do something with the message
