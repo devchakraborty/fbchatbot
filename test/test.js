@@ -1,17 +1,17 @@
 import request from 'supertest';
 import sinon from 'sinon';
 import nock from 'nock';
-import { FBBot } from '../lib';
+import { FBChatBot } from '../lib';
 
 function botFactory() {
-    return new FBBot({
+    return new FBChatBot({
         verifyToken: 'verify_token',
         logLevel: 'error',
         accessToken: 'access_token'
     });
 }
 
-describe('FBBot', () => {
+describe('FBChatBot', () => {
 
     it('responds to correct subscription', (done) => {
         const bot = botFactory();

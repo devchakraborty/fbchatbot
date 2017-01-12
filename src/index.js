@@ -6,7 +6,7 @@ import _ from 'lodash';
 import Promise from 'bluebird';
 import fetch from 'node-fetch';
 
-export class FBBot extends EventEmitter {
+export class FBChatBot extends EventEmitter {
     constructor(options={}) {
         super();
         this.options = options;
