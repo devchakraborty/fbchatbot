@@ -1,6 +1,6 @@
 {
   "name": "fbchatbot",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Minimal helper class for building FB Messenger Platform chatbots",
   "main": "index.js",
   "scripts": {
